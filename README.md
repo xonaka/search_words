@@ -37,6 +37,7 @@ A simple shell script to quickly search your frequently used notes, commands, an
 ```sh
 git clone https://github.com/yourname/search_words.git
 cd search_words
+cp memo.txt ~/memo.txt
 chmod +x search_words
 cp search_words ~/bin/  # またはPATHの通ったディレクトリへ
 ```
@@ -47,9 +48,9 @@ cp search_words ~/bin/  # またはPATHの通ったディレクトリへ
 - フォーク＆プルリクエストも歓迎
 
 ## ライセンス (License)
-MIT License
+GPL-3.0 license
 
 ---
 
 ## English Summary
-`search_words` is a simple shell script to search your notes and command snippets by keyword. Default memo file is `~/memo.txt`. Contributions are welcome! See above for usage and details. 
+`search_words` is a simple shell script to search your notes and command snippets by keyword. Default memo file is `~/memo.txt`. Place your memo.txt in your home directory. Contributions are welcome! See above for usage and details. 
