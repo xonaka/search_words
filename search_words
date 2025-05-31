@@ -1,8 +1,14 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+# Usage: search_words KEYWORD [FILE_PATH]
+#   KEYWORD: 検索したいキーワード
+#   FILE_PATH: （省略可）検索対象のファイルパス。省略時はホームディレクトリ直下の memo.txt を使用
+
+DEFAULT_FILE="$HOME/memo.txt"
+
 case $# in
-1) p='/home/mosaku/memo.txt' ;;
-2) p=$2 ;;
-*) echo "Usage: keyward file-path" 1>&2; exit 2 ;;
+  1) file="$DEFAULT_FILE" ;;
+  2) file="$2" ;;
+  *) echo "Usage: $0 KEYWORD [FILE_PATH]" 1>&2; exit 2 ;;
 esac
 
-sed -n "/^キーワード.*$1/,/^$/p" "$p"
+sed -n "/^キーワード.*$1/,/^$/p" "$file"
