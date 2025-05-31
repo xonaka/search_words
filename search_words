@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+case $# in
+1) p='/home/mosaku/memo.txt' ;;
+2) p=$2 ;;
+*) echo "Usage: keyward file-path" 1>&2; exit 2 ;;
+esac
+
+sed -n "/^キーワード.*$1/,/^$/p" "$p"
